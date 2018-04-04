@@ -11,4 +11,35 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <div>
+    <ul>
+      <li>
+        <button (click)="linkPage('DirectionPage');">Direction</button>
+      </li>
+      <li>
+        <button (click)="linkPage('TwopointsPage');">TwoPoints</button>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline" #form="ngForm" (ngSubmit)="setCenter($event)" ac>
+    <div class="form-group">
+      <input type="text" class="form-control" name="latitude" [(ngModel)]="latitude" placeholder="Enter latitude" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="longitude" [(ngModel)]="longitude" placeholder="Enter longitude" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Go</button>
+  </form>
+
+  <div class="col-md-3 col-sm-12 col-xs-12">
+    <button (click)="setMapType('terrain')" class="btn btn-primary">Terrain</button>
+    <button (click)="setMapType('satellite')" class="btn btn-danger">Satellite</button>
+    <button (click)="setMapType('roadmap')" class="btn btn-warning">Road Map</button>
+  </div>
+
+  <div #gmap style="width:100%;height:400px"></div>
+
+
 </ion-content>
+

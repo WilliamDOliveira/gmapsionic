@@ -12,6 +12,9 @@ log.txt
 .vscode/
 npm-debug.log*
 
+package-lock.json
+/package-lock.json
+
 .idea/
 .sourcemaps/
 .sass-cache/

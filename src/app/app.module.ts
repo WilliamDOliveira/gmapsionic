@@ -6,15 +6,27 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { DirectionPageModule } from '../pages/direction/direction.module';
+
+import { AgmCoreModule } from '@agm/core';
+import { FormsModule } from '@angular/forms';
+import { TwopointsPageModule } from '../pages/twopoints/twopoints.module';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage
+
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    DirectionPageModule,
+    TwopointsPageModule,
+    FormsModule,
+    IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBydpsnPgi88rSMNP7zl3cfwHWetH66b90'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
