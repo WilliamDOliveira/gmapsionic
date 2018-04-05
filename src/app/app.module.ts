@@ -11,6 +11,8 @@ import { DirectionPageModule } from '../pages/direction/direction.module';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { TwopointsPageModule } from '../pages/twopoints/twopoints.module';
+import { TestewithcomponentPageModule } from '../pages/testewithcomponent/testewithcomponent.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { TwopointsPageModule } from '../pages/twopoints/twopoints.module';
     BrowserModule,
     DirectionPageModule,
     TwopointsPageModule,
+    TestewithcomponentPageModule,
+    ComponentsModule,
     FormsModule,
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({

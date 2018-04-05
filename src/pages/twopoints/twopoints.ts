@@ -2,12 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { } from '@types/googlemaps';
 
-/**
- * Generated class for the TwopointsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+// Api exemplos
+// https://developers.google.com/maps/documentation/javascript/examples/
+// Api places
+// https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-widget
 
 @IonicPage()
 @Component({
@@ -79,8 +78,13 @@ export class TwopointsPage {
     if (evt.target.value.length >= 3) {
       console.log('this.address: ', this);
       this.autocomplete = new google.maps.places.Autocomplete((<HTMLInputElement>evt.target));
-      console.log('autocomplete: ', this.autocomplete);
+      console.log('autocomplete: ', this.autocomplete );
       this.autocomplete.bindTo('bounds', this.map);
+      this.map.setCenter( new google.maps.LatLng(-23.1521866, -47.15888) );
+      // let points = this.autocomplete.getBounds();
+      // let points = this.autocomplete.setBounds( this.autocomplete.getBounds() );
+      // console.log('points: ', points);
+      // console.log('points: ', typeof points);
     }
 
   }
