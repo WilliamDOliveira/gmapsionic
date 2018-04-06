@@ -1,4 +1,5 @@
 <!-- Generated template for the GmapsComponent component -->
-<div>
-  {{text}}
-</div>
+
+<button (click)="createAndUpdateMap(-23.5013481,-47.5260324)">Nova localizacao</button>
+<input type="text" id="search" #address (keyup)="major($event)">
+<div #gmap style="height:400px;"></div>
